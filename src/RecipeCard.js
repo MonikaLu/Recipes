@@ -7,13 +7,14 @@ import {
   Button,
 } from "@mui/material";
 
-function RecipeCard({ recipeTitle, recipeDetails, recipeImage }) {
+function RecipeCard({
+  recipeTitle,
+  recipeDetails,
+  recipeImage,
+  addRecipeToFavorite,
+}) {
   return (
     <div>
-      {/* <h2>{recipeTitle}</h2>
-        <div>{recipeDetails}</div>
-        <img src={recipeImage} alt="failed to load"/> */}
-
       <Card sx={{ maxWidth: 345 }}>
         <CardMedia sx={{ height: 200 }} title="Taco" image={recipeImage} />
         <CardContent>
@@ -27,6 +28,14 @@ function RecipeCard({ recipeTitle, recipeDetails, recipeImage }) {
         <CardActions>
           <Button size="small">Share</Button>
           <Button size="small">Learn More</Button>
+          <Button
+            size="small"
+            variant="outlined"
+            color="primary"
+            onClick={() => addRecipeToFavorite(recipeTitle)}
+          >
+            Add to favorite
+          </Button>
         </CardActions>
       </Card>
     </div>
