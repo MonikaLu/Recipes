@@ -4,6 +4,7 @@ import KebabImage from "./images/kebab.webp";
 import FajitasImage from "./images/fajitas.jpeg";
 import Grid from "@mui/material/Grid";
 import { useState } from "react";
+import React from "react";
 
 function App() {
   const [listOfFavorites, setlistOfFavorites] = useState([
